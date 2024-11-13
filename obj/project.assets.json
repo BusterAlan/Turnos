@@ -4074,11 +4074,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Turnos\\Turnos.csproj",
+      "projectUniqueName": "C:\\Turnos\\Turnos.csproj",
       "projectName": "Turnos",
-      "projectPath": "c:\\Turnos\\Turnos.csproj",
+      "projectPath": "C:\\Turnos\\Turnos.csproj",
       "packagesPath": "C:\\Users\\Latitude\\.nuget\\packages\\",
-      "outputPath": "c:\\Turnos\\obj\\",
+      "outputPath": "C:\\Turnos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4149,7 +4149,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
