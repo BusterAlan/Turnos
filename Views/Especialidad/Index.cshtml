@@ -4,30 +4,37 @@
     
 *@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Especialidades</title>
-</head>
-<body>
-    <table>
-        <tr>
-            <th>Id</th>
-            <th>Nombre</th>
-            <th>Descripcion</th>
-            <th>Acciones</th>
-        </tr>
-        <tbody>
+@model IEnumerable<Turnos.Models.Especialidad>
+@{
+    ViewData["Title"] = "Especialidades";
+}
+<h2>Especialidades</h2>
+
+<table class="table table_striped">
+
+
+    <thead>
+
+        <th>@Html.DisplayNameFor(model => model.Descripcion)</th>
+
+    </thead>
+
+    <tbody>
+
+        <!-- Array asociativo -->
+
+        @foreach (var item in Model)
+        {
+
             <tr>
-                <td>Traumatólogo</td>
+
+                <td>@Html.DisplayFor(modelItem => item.Descripcion)</td>
+
             </tr>
-            <tr>
-                <td>Cardiólogo</td>
-            </tr>
-        </tbody>
-    </table>
-</body>
-</html>
+
+        }
+
+    </tbody>
+
+</table>
 
