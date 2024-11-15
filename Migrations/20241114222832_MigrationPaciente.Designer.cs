@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Turnos.Models;
 
@@ -10,9 +11,11 @@ using Turnos.Models;
 namespace Turnos.Migrations
 {
     [DbContext(typeof(TurnosContext))]
-    partial class TurnosContextModelSnapshot : ModelSnapshot
+    [Migration("20241114222832_MigrationPaciente")]
+    partial class MigrationPaciente
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
