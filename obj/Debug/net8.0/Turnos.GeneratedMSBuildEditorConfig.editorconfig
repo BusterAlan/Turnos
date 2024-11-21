@@ -42,6 +42,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Turnos/Views/Medico/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Turnos/Views/Medico/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Turnos/Views/Medico/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Turnos/Views/Medico/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Turnos/Views/Medico/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Turnos/Views/Paciente/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -68,6 +88,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Turnos/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Turnos/Views/Turno/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHVybm9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Turnos/Views/_ViewImports.cshtml]

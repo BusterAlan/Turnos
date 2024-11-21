@@ -1,4 +1,4 @@
-@model IEnumerable<Turnos.Models.Paciente>
+@model IEnumerable<Turnos.Models.Medico>
 
 <p>
     <a asp-action="Create" class="btn-floating btn-large green darken-1"><i class="material-icons">person_add</i></a>
@@ -21,6 +21,12 @@
             <th>
                 @Html.DisplayNameFor(modelo => modelo.Email)
             </th>
+            <th>
+                @Html.DisplayNameFor(modelo => modelo.HorarioAtencionDesde)
+            </th>
+            <th>
+                @Html.DisplayNameFor(modelo => modelo.HorarioAtencionHasta)
+            </th>
         </tr>
     </thead>
     <tbody>
@@ -42,10 +48,16 @@
                 <td>
                     @Html.DisplayFor(modeloItem => item.Email)
                 </td>
+                <th>
+                    @Html.DisplayNameFor(modelo => modelo.HorarioAtencionDesde)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(modelo => modelo.HorarioAtencionHasta)
+                </th>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.IdPaciente"><i class="material-icons">edit</i></a> 
-                    <a asp-action="Details" asp-route-id="@item.IdPaciente"><i class="material-icons grey-text">more_vert</i></a> 
-                    <a asp-action="Delete" asp-route-id="@item.IdPaciente"><i class="material-icons red-text">delete</i></a>
+                    <a asp-action="Edit" asp-route-id="@item.IdMedico"><i class="material-icons">edit</i></a> 
+                    <a asp-action="Details" asp-route-id="@item.IdMedico"><i class="material-icons grey-text">more_vert</i></a> 
+                    <a asp-action="Delete" asp-route-id="@item.IdMedico"><i class="material-icons red-text">delete</i></a>
                 </td>
             </tr>
         }
