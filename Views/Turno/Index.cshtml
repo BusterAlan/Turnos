@@ -4,6 +4,32 @@
     ViewBag.Title = "Asignación de Turnos";
 }
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Turno</title>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            locale: 'es', // Configuración de idioma
+            initialView: 'dayGridMonth',
+            //events: "http://fullcalendar.io/api/demo-feeds/events.json?overload=day"
+            });
+
+            calendar.render();
+        });
+
+    </script>
+</head>
+<body>
+<p>
+    <a asp-action="Create" class="btn-floating btn-large green darken-1"><i class="material-icons">person_add</i></a>
+</p>
 <div class="row">
     <div class="col s6">
         <label asp-for="IdMedico">Médico</label>
@@ -40,6 +66,7 @@
     </div>
 </div>
 
+<div id="calendar"></div>
 <div id="CalendarioTurnos"></div>
 
 <link href="~/fullcalendar/fullcalendar.css" rel="stylesheet"/>
@@ -218,4 +245,7 @@
         })        
 
     </script>
-}
+}   
+</body>
+</html>
+

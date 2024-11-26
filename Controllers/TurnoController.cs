@@ -21,6 +21,12 @@ namespace Turnos.Controllers
 
         public IActionResult Index()
         {
+            if (_context.Medico == null || _context.Paciente == null)
+            {
+                return NotFound();
+            }
+
+            Console.WriteLine("Medico: " + _context.Medico.ToList().Count);
             ViewData["IdMedico"] = new SelectList(from medico in _context.Medico.ToList() select new { IdMedico = medico.IdMedico, NombreCompleto = medico.Nombre + " " + medico.Apellido},"IdMedico","NombreCompleto");
             ViewData["IdPaciente"] = new SelectList(from paciente in _context.Paciente.ToList() select new { IdPaciente = paciente.IdPaciente, NombreCompleto = paciente.Nombre + " " + paciente.Apellido},"IdPaciente","NombreCompleto");
             return View();
@@ -28,6 +34,12 @@ namespace Turnos.Controllers
 
         public JsonResult ObtenerTurnos(int idMedico)
         {
+            Console.WriteLine("idMedico ObtenerTurnos: " + idMedico);
+            if (_context.Turno == null)
+            {
+                return Json(null);
+            }
+
             var turnos = _context.Turno.Where(t => t.IdMedico == idMedico)
             .Select(t => new {
                 t.IdTurno,
@@ -46,9 +58,15 @@ namespace Turnos.Controllers
         [ValidateAntiForgeryToken]
         public JsonResult GrabarTurno(Turno turno)
         {
+            Console.WriteLine("GrabarTurno: " + turno.IdTurno);
             var ok = false;
             try
             {
+                if (_context.Turno == null)
+                {
+                    return Json(null);
+                }
+
                _context.Turno.Add(turno);
                _context.SaveChanges();
                ok = true; 
@@ -64,9 +82,15 @@ namespace Turnos.Controllers
         [HttpPost]
         public JsonResult EliminarTurno(int idTurno)
         {
+            Console.WriteLine("idTurno EliminarTurno: " + idTurno);
             var ok = false;
             try
             {
+                if (_context.Turno == null)
+                {
+                    return Json(null);
+                }
+
                 var turnoAEliminar = _context.Turno.Where(t => t.IdTurno == idTurno).FirstOrDefault();
                 if (turnoAEliminar != null)
                 {
@@ -82,6 +106,28 @@ namespace Turnos.Controllers
 
             var jsonResult = new {ok = ok};
             return Json(jsonResult);
+        }
+
+        // GET: Turno/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Turno/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,Paciente,Medico,Fecha,Hora")] Turno turno)
+        {
+
+            if (ModelState.IsValid)
+            {
+                _context.Add(turno);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(turno);
+            
         }
     }
 }

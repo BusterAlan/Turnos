@@ -119,6 +119,40 @@ namespace Turnos.Models {
             .WithMany(p => p.MedicoEspecialidad)
             .HasForeignKey(p => p.IdEspecialidad);
 
+            modelBuilder.Entity<Turno>(entidad =>
+        {
+            entidad.ToTable("Turno");
+
+            entidad.HasKey(m => m.IdTurno);
+
+            entidad.Property(m => m.IdPaciente)
+            .IsRequired()
+            .IsUnicode(false);
+
+            entidad.Property(m => m.IdMedico)
+            .IsRequired()
+            .IsUnicode(false);
+
+            entidad.Property(m => m.FechaHoraInicio)
+            .IsRequired()
+            .IsUnicode(false);
+
+            entidad.Property(m => m.FechaHoraFin)
+            .IsRequired()
+            .IsUnicode(false);
+            
+        }
+
+        );
+
+        modelBuilder.Entity<Turno>().HasOne(x => x.Paciente)
+        .WithMany(p => p.Turno)
+        .HasForeignKey(p => p.IdPaciente);
+
+         modelBuilder.Entity<Turno>().HasOne(x => x.Medico)
+        .WithMany(m => m.Turno)
+        .HasForeignKey(m => m.IdMedico);
+
         }
 
     }

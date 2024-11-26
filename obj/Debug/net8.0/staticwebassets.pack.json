@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Turnos\\wwwroot\\fullcalendar\\fullcalendar-6.1.15.zip",
+      "PackagePath": "staticwebassets\\fullcalendar\\fullcalendar-6.1.15.zip"
+    },
+    {
       "Id": "C:\\Turnos\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

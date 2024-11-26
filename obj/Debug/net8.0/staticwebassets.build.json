@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SaKdyEXlZlZLcvlDRUvH6MFOxItXqLOskrTRdPEBy4g=",
+  "Hash": "ImswH2/MhaMz7LvAJmiO3fnjlAthpGV5iy12nLriYw0=",
   "Source": "Turnos",
   "BasePath": "_content/Turnos",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Turnos\\wwwroot\\fullcalendar\\fullcalendar-6.1.15.zip",
+      "SourceId": "Turnos",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Turnos\\wwwroot\\",
+      "BasePath": "_content/Turnos",
+      "RelativePath": "fullcalendar/fullcalendar-6.1.15.zip",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fullcalendar\\fullcalendar-6.1.15.zip"
     },
     {
       "Identity": "C:\\Turnos\\wwwroot\\js\\site.js",

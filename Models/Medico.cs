@@ -8,7 +8,6 @@ namespace Turnos.Models
 
     [Key]
     public int IdMedico { get; set; }
-
     public required string Nombre { get; set; } 
     public required string Apellido { get; set; } 
     public required string Direccion { get; set; } 
@@ -18,6 +17,7 @@ namespace Turnos.Models
     public DateTime HorarioAtencionDesde { get; set; } 
     public DateTime HorarioAtencionHasta { get; set; }
     public List<MedicoEspecialidad>? MedicoEspecialidad { get; set; } 
+    public ICollection<Turno> Turno { get; set; } = [];
 
     }
 
